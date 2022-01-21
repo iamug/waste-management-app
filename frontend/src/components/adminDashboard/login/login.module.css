@@ -1,0 +1,9 @@
+body {
+  background-color: #7e57c2;
+  background-size: cover;
+  background-position: center;
+}
+
+body {
+  background-image: url("../images/bg-pattern.png");
+}

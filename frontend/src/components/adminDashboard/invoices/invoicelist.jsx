@@ -359,12 +359,7 @@ const CategoryListComponent = (props) => {
                       <Row gutter={10}>
                         <Col xs={24}>
                           <FormGroup>
-                            <ControlLabel>
-                              Amount
-                              <HelpBlock tooltip style={{ marginTop: "0px" }}>
-                                Required
-                              </HelpBlock>
-                            </ControlLabel>
+                            <ControlLabel>User Name</ControlLabel>
                             <FormControl value={formValue.user?.name} readOnly={formValue.isPaid} />
                           </FormGroup>
                         </Col>{" "}

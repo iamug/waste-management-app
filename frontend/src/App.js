@@ -5,8 +5,6 @@ import "rsuite/dist/styles/rsuite-default.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
 import DataContext from "./context/datacontext";
-import MenuComponent from "./components/menu/menucomponent";
-import UserComponent from "./components/menu/userscomponent";
 import AdminDashboard from "./components/adminDashboard/home";
 import UserDashboard from "./components/userDashboard/home";
 

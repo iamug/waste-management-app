@@ -135,10 +135,10 @@ const LeftSideMenuComponent = (props) => {
 
             <li>
               <a
-                href="/user/orders"
+                href="/user/invoices"
                 onClick={(e) => {
                   e.preventDefault();
-                  props.history.push("/user/orders");
+                  props.history.push("/user/invoices");
                 }}
               >
                 <i className="fas fa-receipt" />

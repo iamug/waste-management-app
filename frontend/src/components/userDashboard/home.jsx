@@ -85,7 +85,7 @@ function UserDashboard() {
 
                   <Route path="/user/requests" exact component={RequestListComponent} />
 
-                  <Route path="/user/orders" exact component={OrderListComponent} />
+                  <Route path="/user/invoices" exact component={OrderListComponent} />
 
                   {/* <Route path="/user/tablecategory" exact component={TableCategoryListComponent} /> */}
 

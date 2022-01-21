@@ -25,8 +25,8 @@ function App() {
 
           <Route path="/user/" component={withRouter(UserDashboard)} />
           <Route path="/admin/" component={withRouter(AdminDashboard)} />
-          <Route path="/menu" exact component={withRouter(UserComponent)} />
-          <Route path="/menu/:id/:tablename?" exact component={withRouter(MenuComponent)} />
+          {/* <Route path="/menu" exact component={withRouter(UserComponent)} />
+          <Route path="/menu/:id/:tablename?" exact component={withRouter(MenuComponent)} /> */}
           <Redirect to="/user" />
         </Switch>
       </Router>

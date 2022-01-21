@@ -326,7 +326,7 @@ const CategoryListComponent = (props) => {
                           labelKey="email"
                           valueKey="_id"
                           value={formValue.user?._id || formValue.user}
-                          disabled={formValue.isPaid}
+                          readOnly={formValue.isPaid}
                           onOpen={handleSelectUsers}
                           onSearch={handleSelectUsers}
                           renderMenu={(menu) => {
@@ -354,6 +354,24 @@ const CategoryListComponent = (props) => {
                     </Col>
                   </Row>
                   <div className="mb-3"></div>
+                  {dataUpdate && (
+                    <>
+                      <Row gutter={10}>
+                        <Col xs={24}>
+                          <FormGroup>
+                            <ControlLabel>
+                              Amount
+                              <HelpBlock tooltip style={{ marginTop: "0px" }}>
+                                Required
+                              </HelpBlock>
+                            </ControlLabel>
+                            <FormControl value={formValue.user?.name} readOnly={formValue.isPaid} />
+                          </FormGroup>
+                        </Col>{" "}
+                      </Row>
+                      <div className="mb-3"></div>
+                    </>
+                  )}
                   <Row gutter={10}>
                     <Col xs={12}>
                       <FormGroup>
@@ -363,7 +381,7 @@ const CategoryListComponent = (props) => {
                           format="yyyy-MM"
                           ranges={[]}
                           required
-                          disabled={formValue.isPaid}
+                          readOnly={formValue.isPaid}
                           disabledDate={(date) => disablePrevious(date)}
                           accepter={DatePicker}
                           format="YYYY-MM"
@@ -379,7 +397,7 @@ const CategoryListComponent = (props) => {
                             Required
                           </HelpBlock>
                         </ControlLabel>
-                        <FormControl name="amount" type="number" min="1" required disabled={formValue.isPaid} />
+                        <FormControl name="amount" type="number" min="1" required readOnly={formValue.isPaid} />
                       </FormGroup>
                     </Col>
                   </Row>
@@ -404,7 +422,6 @@ const CategoryListComponent = (props) => {
                             <ControlLabel>Payment Date</ControlLabel>
                             <FormControl
                               readOnly
-                              disabled
                               value={formValue.paymentDate && new Date(formValue.paymentDate).toDateString()}
                             />
                           </FormGroup>
